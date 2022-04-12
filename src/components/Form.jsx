@@ -18,7 +18,7 @@ class Form extends React.Component {
       onSaveButtonClick,
     } = this.props;
     return (
-      <form>
+      <form className="main-form">
         <h2>Adicionar nova carta</h2>
         <div className="card-name">
           <label htmlFor="name-input">
@@ -29,8 +29,8 @@ class Form extends React.Component {
               id="name-input"
               value={ cardName }
               onChange={ onInputChange }
+              placeholder="Nome da Carta"
             />
-            Nome da carta
           </label>
         </div>
         <div className="card-desc">
@@ -43,8 +43,8 @@ class Form extends React.Component {
               rows="10"
               value={ cardDescription }
               onChange={ onInputChange }
+              placeholder="Descriçao da Carta"
             />
-            Descrição da carta
           </label>
         </div>
         <div className="card-stats">
@@ -56,8 +56,8 @@ class Form extends React.Component {
               id="attr1-input"
               value={ cardAttr1 }
               onChange={ onInputChange }
+              placeholder="Atributo 01"
             />
-            Attr01
           </label>
           <label htmlFor="attr2-input">
             <input
@@ -67,9 +67,9 @@ class Form extends React.Component {
               id="attr2-input"
               value={ cardAttr2 }
               onChange={ onInputChange }
+              placeholder="Atributo 02"
             />
           </label>
-          Attr02
           <label htmlFor="attr3-input">
             <input
               data-testid="attr3-input"
@@ -78,8 +78,8 @@ class Form extends React.Component {
               id="attr3-input"
               value={ cardAttr3 }
               onChange={ onInputChange }
+              placeholder="Atributo 03"
             />
-            Attr03
           </label>
         </div>
         <div className="card-img">
@@ -91,12 +91,14 @@ class Form extends React.Component {
               id="image-input"
               value={ cardImage }
               onChange={ onInputChange }
+              placeholder="Inserir link da Imagem"
             />
-            Imagem
           </label>
         </div>
         <div className="card-rarity">
           <label htmlFor="rare-input">
+            Definir raridade:
+            <br />
             <select
               data-testid="rare-input"
               name="cardRare"
@@ -109,7 +111,6 @@ class Form extends React.Component {
               <option value="muito raro">muito raro</option>
 
             </select>
-            Raridade
           </label>
         </div>
         <div className="card-trump">
