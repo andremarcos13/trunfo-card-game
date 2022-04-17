@@ -102,3 +102,11 @@ main {
   width: 50%;
 } */
 
+input {
+  text-align: center;
+}
+
+textarea {
+  text-align: center;
+  align-items: center;
+}
